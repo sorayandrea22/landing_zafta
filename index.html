@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estamos horneando algo...</title>
+  <title>Zafta - En construcción</title>
   <style>
     * {
       margin: 0;
@@ -11,50 +11,68 @@
       box-sizing: border-box;
     }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: url('image/Estamos-horneando-algo.png') no-repeat center center;
-      background-size: cover;
-      position: relative;
-      color: #7a0010;
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
     }
 
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("Estamos_horneando_algo.png") no-repeat center center/cover;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 105, 180, 0.6); /* rosado suave con transparencia */
     }
 
     .content {
       position: relative;
-      z-index: 1;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
       text-align: center;
       padding: 20px;
     }
 
-    .content h1 {
+    h1 {
       font-size: 3rem;
-      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
     }
 
     /* Responsive */
     @media (max-width: 768px) {
-      .content h1 {
+      h1 {
         font-size: 2rem;
       }
-    }
-
-    @media (max-width: 480px) {
-      .content h1 {
-        font-size: 1.5rem;
+      p {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
+  <div class="background"></div>
+  <div class="overlay"></div>
   <div class="content">
     <h1>Estamos horneando algo...</h1>
+    <p>Muy pronto Zafta estará listo para ti 🍰</p>
   </div>
 </body>
 </html>
